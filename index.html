@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Для Аэлишки ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="hearts" id="hearts"></div>
+
+    <main class="container">
+
+        <!-- Первый экран -->
+        <section class="card" id="welcome">
+            <div class="heart-icon">💗</div>
+
+            <h1>Привет, Аэлишка!</h1>
+
+            <p>
+                У меня есть кое-что особенное
+                для тебя...
+            </p>
+
+            <button onclick="showProposal()">
+                Открыть сюрприз ❤️
+            </button>
+        </section>
+
+        <!-- Экран предложения -->
+        <section class="card hidden" id="proposal">
+
+            <div class="heart-icon">🌹</div>
+
+            <h1>Аэлишка...</h1>
+
+            <p>
+                Ты стала для меня особенным человеком.
+                Я очень хочу сказать тебе кое-что важное.
+            </p>
+
+            <h2>Будешь моей девушкой? ❤️</h2>
+
+            <div class="buttons">
+                <button class="yes" onclick="sayYes()">
+                    Да ❤️
+                </button>
+
+                <button class="no" id="noButton"
+                    onmouseenter="moveButton()"
+                    ontouchstart="moveButton()">
+                    Нет 🙈
+                </button>
+            </div>
+        </section>
+
+        <!-- Финальный экран -->
+        <section class="card hidden" id="success">
+
+            <div class="heart-icon">💖</div>
+
+            <h1>Урааа! ❤️</h1>
+
+            <h2>Теперь мы вместе!</h2>
+
+            <p>
+                Аэлишка, я очень счастлив!
+                Пусть впереди нас ждёт много
+                счастливых моментов.
+            </p>
+
+            <div class="final-heart">💕</div>
+
+            <p class="signature">С любовью ❤️</p>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

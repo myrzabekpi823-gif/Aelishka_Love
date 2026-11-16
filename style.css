@@ -1,0 +1,165 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(
+        135deg,
+        #ffe0ec,
+        #ffc2d8,
+        #ffedf3
+    );
+}
+
+.container {
+    width: 90%;
+    max-width: 500px;
+    z-index: 2;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.88);
+    padding: 45px 30px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 15px 50px rgba(220, 80, 130, 0.2);
+    animation: appear 0.8s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+.heart-icon {
+    font-size: 65px;
+    margin-bottom: 20px;
+    animation: heartbeat 1.5s infinite;
+}
+
+h1 {
+    color: #d63375;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #c02667;
+    margin: 25px 0;
+    font-size: 25px;
+}
+
+p {
+    color: #77515f;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+button {
+    border: none;
+    padding: 15px 25px;
+    border-radius: 30px;
+    background: #ff5c96;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+    background: #e83e7d;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.yes {
+    background: #ff4f91;
+}
+
+.no {
+    background: #999;
+}
+
+.final-heart {
+    font-size: 60px;
+    animation: heartbeat 1s infinite;
+}
+
+.signature {
+    color: #d63375;
+    font-weight: bold;
+}
+
+.hearts {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.heart {
+    position: absolute;
+    bottom: -30px;
+    animation: floatUp linear forwards;
+    opacity: 0.7;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 35px 20px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+}
+
